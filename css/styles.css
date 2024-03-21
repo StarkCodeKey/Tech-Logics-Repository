@@ -1,0 +1,867 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  background: url("https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c29mdHdhcmUlMjBjb21wYW55fGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 53em;
+  width: auto;
+}
+
+.demo-wrap {
+  position: relative;
+}
+
+.demo-wrap:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 19, 19, 0.582);
+  z-index: -1;
+}
+
+.container {
+  background-color:rgb(35, 23, 66);
+  width: 100%;
+  height: 48px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 7;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 10px;
+  height: 65px;
+  width: 65px;
+  transition: all 310ms ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.company-name {
+  color: rgba(252, 104, 78, 0.76);
+  font-family: 'Lucida Bright';
+  font-style: oblique;
+  font-size: 1.3em;
+  white-space: nowrap;
+  position: relative;
+  left: -0.5em;
+  text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.753);
+  display: inline-block;
+}
+
+.company-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(252, 104, 78, 0.76);
+  transform: scaleX(0);
+  transition: width 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transform-origin: right;
+}
+
+.company-name:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header-nav {
+  margin-left: auto;
+}
+
+.header-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.753);
+}
+
+.header-nav li {
+  font-size: 1.5em;
+  margin-left: 3em;
+}
+
+.contact-link a {
+  margin-right: 1em;
+}
+
+.header-nav a {
+  display: inline-block;
+  color:rgb(176, 226, 36);
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+.header-nav a:hover {
+  color: #eb1111;
+  background-color: rgb(35, 23, 66);
+}
+
+.sidebar-nav {
+  position: fixed;
+  z-index: 5;
+  left: -19em;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 5.4rem;
+  padding-right: 0.8rem;
+  background: url("../images/Untitled.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  line-height: 2.2;
+  font-weight: bold;
+  color: #e62012;
+  transition: left 500ms ease-in-out 50ms;
+}
+
+.sidebar-nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 27, 27, 0.116);
+  z-index: -1;
+}
+
+.sidebar-nav:hover {
+  left: 0;
+}
+
+.sidebar-heading {
+  font-size: 2.2em;
+  font-weight: 600;
+  border: 2px solid rgb(0, 0, 0);
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+  line-height: 1.2;
+  background-color:#0000009c;
+  letter-spacing: 0.1em;
+  margin-right: 1.4em;
+  border-radius: 9px;
+}
+
+.sidebar-nav ol {
+  color:rgb(44, 1, 42);
+  font-size: 1.5em;
+}
+
+.sidebar-nav a {
+  color:rgb(44, 1, 42);
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+  font-style: oblique;
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
+.sidebar-nav a:hover {
+    font-size: 1.6em;
+    color:rgb(255, 41, 237);
+}
+
+.sidebar-arrow img {
+  height: 4em;
+  width: auto;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 17rem;
+}
+
+.page-grid, .introduction, .relax-intro, .services-intro h1.goals .yourbusiness {
+  white-space: nowrap;
+}
+
+.introduction {
+  padding-top: 5em;
+  margin-left: 9em;
+  font-family: Helvetica, Arial, sans-serif;
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-rows: 6em 1fr 1fr;
+}  
+
+.relax-intro {
+  font-size: 2.2em;
+  color:rgb(255, 240, 35);
+  margin-top: 0.8em;
+}
+
+.services-intro h1.goals {
+  font-size: 5.5em;
+  color: rgb(1, 235, 71);
+}
+
+.services-intro {
+  margin-bottom: 1em;
+}
+
+.yourbusiness h4 {
+  font-size: 2.6em;
+  color:rgb(16, 114, 243);  
+}
+
+.online-business {
+  color:rgb(16, 122, 243); 
+  font-style: italic;
+  font-family: Tahoma, sans-serif;
+}
+
+.signup-form {
+  grid-column: 2 / 3;
+  margin-top: 5.4em;
+  box-sizing: border-box;
+  color:rgb(255, 126, 5);
+  font-size: 2.2em;
+  font-family: Cambria, 'Times New Roman', serif;
+}
+
+hr {
+  width: 80%;
+  border-color:rgb(136, 43, 0);
+  height: 4px;
+  background-color: rgb(235, 48, 1);
+}
+
+.signup-form input[type=text],
+.signup-form input[type=email],
+.signup-form input[type=password] {
+  border: 2px solid black;
+  width: 60%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+}
+
+.signup-form input[type=submit] {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 27%;
+  background-color: #21a300;
+  padding: 0.4em;
+  margin-left: 5em; 
+  margin-top: 2em;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+}
+
+.signup-form input[type=submit]:hover {
+  color: #81fd5b
+}
+
+.footer-area {
+  background: linear-gradient(to bottom, #860080, #1f0172);
+  border-top: 1px solid #ad3939;
+  box-shadow: 0 0 10px rgba(226, 28, 28, 0.1);
+  padding: 9px;
+  text-align: center;
+}
+
+.footer-heading {
+  color: white;
+  font-weight: 200;
+  font-size: 2.1em;
+  font-family: sans-serif;
+  padding-bottom: 1rem; 
+}
+
+.footer-para {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+  margin-left: 5em;
+  text-align: center;
+}
+
+.footer-button {
+  font-size: 1.3em;
+  padding: 0.3em;
+  background-color: rgba(1, 166, 207, 0.767);
+  color:rgb(241, 218, 187);
+  border-radius: 10px;
+  margin-bottom: 1em;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+
+.footer-button:hover {
+  color:#f5f231e0;
+  transform: scale(1.2);
+}
+
+.footer-hr {
+  background-color:#ffffff75;
+  border-color: #ffffff75;
+  margin-left: 17em;
+  width: 60%;
+  height: 2px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1px;
+  padding-top: 1.7em;
+  padding-bottom: 2.9em;
+  margin-left: 13em;
+  width: 70%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.footer-letsone {
+  grid-column: 1 / span 1;
+  align-items: center;
+}
+
+.footer-partnerships {
+  grid-column: 2 / span 1;
+}
+
+.footer-about {
+  grid-column: 3 / span 1;
+}
+
+.footer-support {
+  grid-column: 4 / span 1;
+}
+
+.footer-icons {
+  grid-column: 5 / span 2;
+}
+
+.span-lets {
+  color:rgb(1, 201, 167);
+  display: block;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.span-one {
+  color:rgb(152, 247, 231);
+  font-size: 1.6em;
+  font-weight: 100;
+}
+
+.footer-subheading {
+  color:rgb(1, 201, 167);
+  font-size: 0.9em;
+  font-family: Arial;
+  padding-bottom: 1.9rem;
+}
+
+.footer-ul li {
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.footer-ul li a {
+  color:rgba(255, 255, 255, 0.932);
+  text-decoration: none;
+  transition: color 100ms ease-out;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+.footer-ul li a:hover {
+  color:#eb1111
+}
+
+.social-icons {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-left: 1.7em;
+  font-size: 2em;
+}
+
+.social-icons li a i {
+  padding: 0 0.5em;
+  transition: font-size 400ms ease-in-out; 
+}
+
+.social-icons li a i:hover {
+  transform: scale(1.3);
+}
+
+.fa-facebook {
+  color: #012ae0;
+}
+
+.fa-twitter {
+  color: #01d5f1;
+}
+
+.fa-youtube {
+  color: #dd2f2f;
+}
+
+.fa-instagram {
+  color: #fc1fcc;
+}
+
+.copyright-grid {
+  grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  font-size: 1.2rem;
+}
+
+.copyright-p {
+  grid-column: span 2 / 4;
+}
+
+.policy-p {
+  grid-column: 5 / 6;
+}
+
+/* Media Queries for mobile */
+@media only screen and (max-width: 480px) {
+  .sidebar-nav {
+    display: none;
+  }
+  
+  .container {
+    height: 2.5rem;
+  }
+
+  .logo {
+    display: none;
+  } 
+   
+  .company-name {
+    font-size: 0.9em;
+    margin-left: 0.9rem;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.753);
+    text-decoration-line: underline;
+  }  
+
+  .header-nav {
+    margin-left: 2.7em;
+  }
+
+  .header-nav li {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 0.5em;
+  }
+
+  body {
+    height: 30em;
+    width: auto;
+  }
+
+  .introduction {
+    margin-top: 2em;
+    margin-left: 1.8em;
+    grid-template-rows: 6em 11rem 1fr;
+    font-size: 0.5em;
+  }
+
+  .yourbusiness h4 {
+    font-size: 2.7em;  
+    color:rgb(77, 160, 255);
+  }
+  
+  .online-business {
+    color:rgb(77, 160, 255); 
+  }
+
+  .page-grid {
+    column-gap: 1.8rem;
+  }
+
+  .signup-form {
+    margin-top: 13em;
+    font-size: 0.8em;
+  }
+  
+  hr {
+    width: 73%;
+    height: 2px;
+  }
+  
+  .signup-form input[type=text],
+  .signup-form input[type=email],
+  .signup-form input[type=password] {
+    width: 60%;
+    padding: 0.1em;
+    border-radius: 6px;
+    margin-bottom: 0.8em;
+  }
+  
+  .signup-form input[type=submit] {
+    border-radius: 13px;
+    width: 39%;
+    padding: 0.1em;
+    margin-left: 1rem; 
+    margin-top: 1.8em;
+    margin-bottom: 6em;
+    transition: color 150ms ease-in-out;
+    }
+
+  .footer-area {
+    padding: 9px;
+    text-align: center;
+  }
+  
+  .footer-heading {
+    font-weight: 200;
+    font-size: 1.3em;
+    padding-bottom: 0.8rem; 
+    position: relative;
+    left: -1em;
+  }
+  
+  .footer-para {
+    font-size: 0.6em;
+    font-weight: 500;
+    position: relative;
+    right: 5em;
+  }
+  
+  .footer-button {
+    font-size: 0.7em;
+    padding: 0.4em;
+    border-radius: 10px;
+    margin-bottom: 0em;
+    transition: all 150ms ease-out;
+    position: relative;
+    top: -1.6em;
+    bottom: 0em;
+    left: -1.7em;
+  }
+ 
+  
+  .footer-hr {
+    margin-left: 3em;
+    width: 70%;
+    height: 2px;
+  }
+
+  .bottom-hr {
+    position: relative;
+    bottom: 0em;
+    margin-top: 0.2em;
+  }
+  
+  .footer-links {
+    column-gap: 1.7em;
+    padding-top: 0.4em;
+    padding-bottom: 0.1em;
+    margin-left: 1.6em;
+  }
+  
+  .span-lets {
+    font-size: 0.9em;
+  }
+  
+  .span-one {
+    font-size: 1.3em;
+  }
+  
+  .footer-subheading {
+    font-size: 0.7em;
+    padding-bottom: 1.3rem;
+  }
+  
+  .footer-ul li {
+    padding: 0.2rem;
+    font-size: 0.6rem;
+  }
+  
+  .footer-ul li a {
+    transition: color 100ms ease-out;
+  }
+  
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 0em;
+    font-size: 1.2em;
+  }
+
+  .copyright-grid {
+    font-size: 0.7rem;
+    margin-right: 3em;
+  }
+}
+
+/* Media Query for Tablet */
+@media only screen and (min-width: 490px) and (max-width: 768px) {
+  body {
+    height: 71.5em;
+  }
+  
+  .demo-wrap:before {
+    position: fixed;
+  }
+
+  .container {
+    width: 100%;
+    height: 48px;
+  }
+  
+  .logo {
+    height: 4em;
+    width: 4em;
+    position: fixed;
+    z-index: 999;
+    margin-left: 0.4em;
+  }
+  
+  .logo:hover {
+    transform: scale(1.3);
+  }
+
+  .logo img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+  }
+  
+  .company-name {
+    font-size: 1.3em;
+    position: relative;
+    left: 2.8em;
+  }
+  
+  .header-nav {
+    margin-left: 13.8em;
+  }
+  
+  .header-nav li {
+    font-size: 1.1em;
+    margin-left: 2em;
+  }
+  
+  .sidebar-nav {
+    left: -14.7em;
+    padding-left: 3rem;
+    padding-right: 0.1rem;
+    font-size: 16px;
+  }
+  
+  .sidebar-heading {
+    font-size: 1.9em;
+    font-weight: 600;
+    margin-bottom: 2em;
+    margin-right: 1em;
+    margin-top: 3em;
+  }
+  
+  .sidebar-nav ol {
+    font-size: 1.4em;
+  }
+  
+  .sidebar-nav a {
+    font-size: 1.1em;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .sidebar-nav a:hover {
+      font-size: 1.3em;
+  }
+  
+  .sidebar-arrow img {
+    height: 4.5em;
+    width: auto;
+    position: relative;
+    right: 2px;
+  }
+  
+  .page-grid {
+    column-gap: 4rem;
+  }
+  
+  .introduction {
+    padding-top: 7em;
+    margin-left: 6em;
+    grid-template-rows: 4.6em 1fr 1fr;
+  }  
+  
+  .relax-intro {
+    font-size: 1.4em;
+  }
+  
+  .services-intro h1.goals {
+    font-size: 3.7em;
+  }
+  
+  .services-intro {
+    margin-bottom: 1.9em;
+  }
+  
+  .yourbusiness h4 {
+    font-size: 2em;
+  }
+  
+  .signup-form {
+    margin-top: 10em;
+    font-size: 1.3em;
+  }
+  
+  hr {
+    height: 3px;
+    margin-bottom: 0.4em;
+  }
+  
+  .signup-form input[type=text],
+  .signup-form input[type=email],
+  .signup-form input[type=password] {
+    padding: 0.3em;
+    border-radius: 7px;
+    margin-bottom: 0.4em;
+  }
+  
+  .signup-form input[type=submit] {
+    border-radius: 13px;
+    padding: 0.3em;
+    margin-left: 3em; 
+    margin-top: 2em;
+    cursor: pointer;
+    transition: color 200ms ease-in-out;
+  }
+  
+  .signup-form input[type=submit]:hover {
+    color: #81fd5b
+  }
+
+  .footer-area {
+    padding: 6px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 3;
+    bottom: -9em;
+  }
+  
+  .footer-heading {
+    font-weight: 200;
+    font-size: 1.4em;
+    font-family: sans-serif;
+    padding-bottom: 0.8rem; 
+  }
+  
+  .footer-para {
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-left: 5em;
+  }
+  
+  .footer-button {
+    font-size: 1em;
+    padding: 0.2em;
+    border-radius: 9px;
+    margin-bottom: 0.9em;
+  }
+  
+  .footer-hr {
+    background-color:#ffffff75;
+    border-color: #ffffff75;
+    margin-left: 10em;
+    width: 60%;
+    height: 2px;
+  }
+  
+  .footer-links {
+    padding-top: 0.4em;
+    padding-bottom: 1.7em;
+    margin-left: 5em;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .footer-letsone {
+    grid-column: 1 / span 1;
+    align-items: center;
+  }
+  
+  .footer-partnerships {
+    grid-column: 2 / span 1;
+  }
+  
+  .footer-about {
+    grid-column: 3 / span 1;
+  }
+  
+  .footer-support {
+    grid-column: 4 / span 1;
+  }
+  
+  .footer-icons {
+    grid-column: 5 / span 2;
+  }
+  
+  .span-lets {
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+  
+  .span-one {
+    font-size: 1.6em;
+    font-weight: 100;
+  }
+  
+  .footer-subheading {
+    font-size: 0.9em;
+    padding-bottom: 1.9rem;
+  }
+  
+  .footer-ul li {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .social-icons {
+    padding-left: 0.6em;
+    font-size: 1.8em;
+  }
+  
+  .social-icons li a i:hover {
+    transform: scale(1.2);
+  }
+  
+  .copyright-grid {
+    grid-template-columns: repeat(6, 1fr);
+    display: grid;
+    font-size: 1rem;
+  }
+}

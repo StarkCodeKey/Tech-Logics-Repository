@@ -1,0 +1,506 @@
+.container {
+    background-color:rgb(35, 23, 66);
+    width: 100%;
+    height: 48px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 7;
+  }
+  
+  .logo {
+    display: inline-block;
+    margin-left: 10px;
+    height: 65px;
+    width: 65px;
+    transition: all 310ms ease-in-out;
+  }
+  
+  .logo:hover {
+    transform: scale(1.5);
+  }
+  
+  .logo img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+  }
+  
+  .company-name {
+    color: rgba(252, 104, 78, 0.76);
+    font-family: 'Lucida Bright';
+    font-style: oblique;
+    font-size: 1.3em;
+    white-space: nowrap;
+    position: relative;
+    left: -0.5em;
+    text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.753);
+    display: inline-block;
+  }
+  
+  .company-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(252, 104, 78, 0.76);
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: left;
+  }
+  
+  .company-name:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  .header-nav {
+    margin-left: auto;
+  }
+  
+  .header-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.753);
+  }
+  
+  .header-nav li {
+    font-size: 1.5em;
+    margin-left: 3em;
+  }
+  
+  .contact-link a {
+    margin-right: 1em;
+  }
+  
+  .header-nav a {
+    display: inline-block;
+    color:rgb(176, 226, 36);
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .header-nav a:hover {
+    color: #eb1111;
+    background-color: rgb(35, 23, 66);
+  }
+
+  .companyjourney-container {
+    position: relative;
+    top: 3em;
+    background: linear-gradient(to bottom, #27cf11, #028568);
+    height: 11em;
+    overflow: hidden;
+  }
+
+  .cloud {
+    position: absolute;
+    top: 10em;
+    height: 10em;
+    width: 10em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 48%;
+  }
+
+  .left {
+    left: -5em;
+    top: 3.5em;
+  }
+
+  .bottomleft {
+    left: -0.3em;
+    top: 7em;
+  }
+
+  .right {
+    right: -5em;
+    top: 3.5em;
+  }
+
+  .bottomright {
+    right: -0.3em;
+    top: 7em;
+  }
+
+  .company-journey {
+    text-align: center;
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, sans-serif;
+    font-style: italic;
+    font-size: 1em;
+    top: 2em;
+    line-height: 2.5em;
+    background: linear-gradient(to bottom, #ffdaad, #ffa12e);
+    text-shadow: 2px 2px 2px #00000013;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .missionstatement-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: 7em;
+    left: 3.5em;
+    right: 5em;
+    column-gap: 1em;
+    height: 35em;
+    width: 92%;
+    background-color:rgb(243, 243, 243);
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+    border-radius: 0.9em;
+    overflow: hidden;
+  }
+
+  .missionstatement-container {
+    grid-column: 1 / 2;
+    background: linear-gradient(to bottom, #f7e8d7, #e7c294);
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+  }
+  
+  .mission-heading {
+    position: relative;
+    top: 1.5em;
+    font-size: 2.5em;
+    font-family: Georgia;
+    left: 1em;
+  }
+
+  .missionheading-hr {
+    position: relative;
+    top: 5em;
+    background-color: rgb(161, 23, 23);
+    color: rgb(161, 23, 23);
+    width: 70%;
+    left: 2.6em;
+    height: 0.6em;
+  }
+
+  .mission-para {
+    position: relative;
+    top: 5.6em;
+    text-align: left;
+    left: 2.3em;
+    font-size: 1.5em;
+    font-family: Garamond;
+    font-weight: 600;
+    word-spacing: 0.1em;
+    line-height: 1.2em;
+    width: 80%;
+  }
+
+  .statement-words {
+    color: rgb(223, 90, 14);
+    font-size: 1.1em;
+  }
+
+  .mission-button {
+    display: inline-block;
+    position: relative;
+    top: 7.6em;
+    left: 2.5em;
+    width: 35%;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    padding: 0.4em 1.9em 0.4em 1.2em;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    transition-property: color, background-color;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  .mission-button:hover {
+    color: black;
+    background-color: white;
+  }
+
+  .arrow {
+    position: absolute;
+    right: 1em;
+  }
+
+  .ourmission-img {
+    grid-column: 2 / 3;
+    position: relative;
+    right: 0.5em;
+    top: 5.7em;
+    transform: scaleY(1.2) scaleX(1.03);
+    overflow: hidden;
+    border-radius: 0.2em;
+  }
+
+  .corevalues-container {
+    position: relative;
+    top: 13em;
+    width: 95%;
+    left: 2em;
+    background: linear-gradient(to right, #f9fcd2, #fdf2f2, #f9fcd2);
+  }
+
+  .values-heading {
+    text-align: center;
+    padding: 1.8em;
+    font-size: 2.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(245, 59, 35);
+  }
+
+  .values-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 3em;
+  }
+
+  .values-item {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  .icon-img {
+    height: 4em;
+    width: auto;
+    margin-bottom: 1em;
+  }
+
+  .icon-heading {
+    margin-bottom: 2em;
+    font-size: 1.7em;
+    font-family: Georgia;
+    color: rgb(226, 58, 66);
+  }
+
+  .icon-para {
+    font-size: 1.3em;
+    font-family: Garamond;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-transform: lowercase;
+    margin-bottom: 1em;
+  }
+
+  .icon-para:first-letter {
+    text-transform: none;
+  }
+
+  .ourteam-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 18em;
+    left: 4em;
+    width: 91%;
+    height: 33.6em;
+    background: linear-gradient(to bottom, rgb(243, 243, 243), #f0e2e2);
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+    border-radius: 1.6em;
+    margin-bottom: 24em;
+  }
+  
+  .team-photo {
+    max-width: 45em;
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+    border-radius: 1.6em 0em 0em 1.6em;
+    overflow: hidden;
+  }
+  
+  .team-content {
+    margin-left: 8em;
+  }
+  
+  .team-heading {
+    font-size: 2.7em;
+    position: relative;
+    top: -2em;
+    font-family: Georgia;
+    font-size: 2.7em;
+  }
+
+  .teamheading-hr {
+    position: relative;
+    top: -4.5em;
+    background-color: rgb(161, 23, 23);
+    color: rgb(161, 23, 23);
+    width: 100%;
+    left: 0em;
+    height: 0.6em;
+  }
+  
+  .meetteam-button {
+    width: 99%;
+    padding: 0.5em 0.8em 0.5em 0.8em;
+    position: relative;
+    top: 3em;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 0.6em;
+    transition-property: color, background-color;
+    transition-duration: 350ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  
+  .meetteam-button:hover {
+    color: black;
+    background-color: white;
+  }
+
+  .arrow-team {
+    position: absolute;
+    right: 9em;
+  }
+
+  .footer-area {
+    background: linear-gradient(to bottom, #860080, #1f0172);
+    border-top: 1px solid #660f00;
+    box-shadow: 0 0 10px rgba(226, 28, 28, 0.1);
+    padding: 9px;
+    text-align: center;
+  }
+
+  .footer-hr {
+    background-color:#ffffff75;
+    border-color: #ffffff75;
+    margin-left: 20%;
+    width: 60%;
+    height: 2px;
+    margin-top: 1.3em;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1px;
+    padding-top: 1.7em;
+    padding-bottom: 2.9em;
+    margin-left: 14%;
+    width: 70%;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .footer-letsone {
+    grid-column: 1 / span 1;
+    align-items: center;
+  }
+  
+  .footer-partnerships {
+    grid-column: 2 / span 1;
+  }
+  
+  .footer-about {
+    grid-column: 3 / span 1;
+  }
+  
+  .footer-support {
+    grid-column: 4 / span 1;
+  }
+  
+  .footer-icons {
+    grid-column: 5 / span 2;
+  }
+  
+  .span-lets {
+    color:rgb(1, 201, 167);
+    display: block;
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+  
+  .span-one {
+    color:rgb(152, 247, 231);
+    font-size: 1.6em;
+    font-weight: 100;
+  }
+  
+  .footer-subheading {
+    color:rgb(1, 201, 167);
+    font-size: 0.9em;
+    font-family: Arial;
+    padding-bottom: 1.9rem;
+  }
+  
+  .footer-ul li {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-ul li a {
+    color:rgba(255, 255, 255, 0.932);
+    text-decoration: none;
+    transition: color 100ms ease-out;
+    font-family: Verdana, Tahoma, sans-serif;
+  }
+  
+  .footer-ul li a:hover {
+    color:#eb1111
+  }
+  
+  .social-icons {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-left: 1.7em;
+    font-size: 2em;
+  }
+  
+  .social-icons li a i {
+    padding: 0 0.5em;
+    transition: font-size 400ms ease-in-out; 
+  }
+  
+  .social-icons li a i:hover {
+    transform: scale(1.3);
+  }
+  
+  .fa-facebook {
+    color: #012ae0;
+  }
+  
+  .fa-twitter {
+    color: #01d5f1;
+  }
+  
+  .fa-youtube {
+    color: #dd2f2f;
+  }
+  
+  .fa-instagram {
+    color: #fc1fcc;
+  }
+  
+  .copyright-grid {
+    grid-template-columns: repeat(6, 1fr);
+    display: grid;
+    font-size: 1.3rem;
+  }
+  
+  .copyright-p {
+    grid-column: span 2 / 4;
+  }
+  
+  .policy-p {
+    grid-column: 5 / 6;
+  }
